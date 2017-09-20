@@ -1,0 +1,67 @@
+.sidebar
+
+	&-widget
+		margin-bottom: 30px
+		
+		&:last-child
+			margin-bottom: 0 
+			
+		.widget__header
+			padding: 6px 25px
+			color: #fff
+			background-color: $blue
+			font-size: 18px 
+			margin-bottom: 20px 
+			
+			p
+				margin-bottom: 0 
+				
+		.widget__content
+			font-size: 14px 
+	
+
+
+.search-widget
+	.form-control
+		padding-left: 25px
+		padding-right: 25px 
+		height: 40px
+		padding-top: 0
+		padding-bottom: 0  
+
+
+.filter-widget
+	.widget__content
+		color: $text-light
+		 
+	nav
+		padding-left: 25px
+		
+		ul
+			list-style: none 
+			
+		li
+			&:not(:last-child)
+				margin-bottom: 16px 
+				
+		a
+			color: inherit 
+			
+		li.active,
+		a:hover
+			color: $blue
+
+
+.online-widget
+	.names
+		margin-bottom: 20px
+		 
+		a
+			display: inline
+			
+			&:not(:last-child):after
+				content: ','
+				
+	.total-online
+		p
+			margin-bottom: 0 

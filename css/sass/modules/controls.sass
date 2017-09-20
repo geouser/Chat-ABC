@@ -49,26 +49,7 @@
 
 .input.file
     position: relative
-    padding: 0!important
-
-    &:after
-        content: '';
-        width: 38px;
-        height: 38px;
-        border-radius: 6px
-        background-color: #fdbf2d
-        background-size: 20px;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-image: url(../images/upload.svg);
-        position: absolute;
-        top: 50%;
-        right: 21px;
-        -webkit-transform: translate(50%, -50%);
-        -ms-transform: translate(50%, -50%);
-        -o-transform: translate(50%, -50%);
-        transform: translate(50%, -50%);
-        pointer-events: none;
+    display: flex
 
     input[type="file"] 
         width: 100%;
@@ -88,8 +69,9 @@
 
     span
         +textEnd();
-        display: block
         height: 100%
-        padding: 0 55px 0 15px
+        padding: 0
         text-align: left
+        position: relative
+        text-align: center
         

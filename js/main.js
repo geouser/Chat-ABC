@@ -94,6 +94,23 @@ jQuery(document).ready(function($) {
         
     });
 
+    /*---------------------------
+                                  Widget show more
+    ---------------------------*/
+    $('.js-widget-show-more').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('is-active');
+        $(this).siblings('.advanced').slideToggle();
+
+        if ( $(this).hasClass('is-active') ) {
+            $(this).text( $(this).attr('data-less') )
+        } else {
+            $(this).text( $(this).attr('data-more') )
+        }
+    });
+
+
+
 
     /**
      *

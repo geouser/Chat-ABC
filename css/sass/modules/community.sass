@@ -40,3 +40,33 @@
 			p
 				margin-bottom: 0 
 				
+
+.tc-message
+	padding: 25px
+	margin-right: 25px 
+	background-color: #ccc
+	display: flex
+	
+	&__user
+		width: 120px
+		text-align: center
+		
+		.user-pic
+			width: 100%
+			padding-top: 100%
+			position: relative
+			overflow: hidden 
+			border-radius: 50% 
+			border: 1px solid $blue
+			
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) 
+				width: 100%
+		
+
+	&__content
+		flex: 1 1 auto
+		padding-left: 25px 

@@ -4,15 +4,13 @@ body
     font-family: $raleway
     font-size: 18px  
     color: $text 
+    
 body
     padding-top: 125px 
-.wrapper
-    width: 1200px
-    padding: 0 15px
-    margin: 0 auto
-    max-width: 100%    
-    &--wide
-        width: 1600px 
+
+.container
+    @media (min-width: 1200px)
+        max-width: 1180px
         
 +placeholder
 	opacity: 1

@@ -1,0 +1,84 @@
+.form
+    border-radius: 5px
+    background-color: #FFF
+    padding: 20px 30px 30px   
+    & > img
+        display: block
+        margin: 0 auto 
+    input
+        display: block
+        width: 100% 
+        border: none
+        border-bottom: 1px solid #E1DFE0 
+        text-align: center
+        padding-bottom: 10px
+        margin-top: 20px  
+        font-size: 14px
+        color: $text
+        background: transparent 
+    .btn
+        margin-top: 20px  
+        
+    &__links
+        margin-top: 7px 
+        font-size: 11px
+        color: $blue
+        a
+            transition: all .2s
+            border-bottom: 1px solid $blue 
+            text-decoration: none
+            &:hover
+                border-color: transparent 
+        
+.input-group
+    &--img
+        input
+            padding-left: 30px 
+            padding-right: 30px 
+    &--user
+        background-image: url("../images/user-ic.svg")
+        background-repeat: no-repeat
+        background-size: auto 27px 
+        background-position: 2px 22px
+    &--pas
+        background-image: url("../images/lock-ic.svg")
+        background-repeat: no-repeat
+        background-size: 22px auto 
+        background-position: 4px 24px
+        
+    &--checkbox
+        margin-top: 10px 
+        label
+            cursor: pointer
+        input
+            display: inline-block
+            vertical-align: middle
+            width: 0
+            height: 0  
+            &:checked
+                & + span
+                    color: $green 
+                    &:before
+                        content: "\f046"
+                        color: $green 
+        span
+            font-size: 12px
+            color: $text-light  
+            display: inline-block
+            vertical-align: middle
+            &:before
+                content: "\f096"
+                font-family: "FontAwesome" 
+                font-size: 20px
+                font-weight: 300  
+                line-height: 1 
+                display: inline-block
+                vertical-align: middle
+                margin-right: 4px  
+                position: relative
+                top: -2px
+        
+.tab-content
+    .form
+        border-top-left-radius: 0  
+        border-top-right-radius: 0  

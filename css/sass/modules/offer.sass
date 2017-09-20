@@ -1,5 +1,7 @@
 .offer
-	+flex($d: column, $ai: center, $j: center)
+	height: 465px 
+	padding-top: 45px 
+	+flex($d: column, $ai: center, $j: flex-start)
 	
 	background-position: 50% 50%
 	-webkit-background-size: cover
@@ -7,6 +9,16 @@
 	background-size: cover
 	
 	&--fluid
+		height: auto 
+		padding: 0 
 		padding-bottom: 25%
 	
+	&__info
+		max-width: 450px 
+		h1
+			color: $text-lighter
+			font-size: 66px 
+		p
+			color: $green
+			font-size: 17px  
 

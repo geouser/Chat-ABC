@@ -42,10 +42,15 @@
 				
 
 .tc-message
-	padding: 25px
+	padding: 15px
 	margin-right: 25px 
-	background-color: #ccc
 	display: flex
+	
+	&:not(:last-child)
+		margin-bottom: 35px 
+	
+	&:nth-child(even)
+		background-color: #F8F8F8 
 	
 	&__user
 		width: 120px
@@ -58,6 +63,7 @@
 			overflow: hidden 
 			border-radius: 50% 
 			border: 1px solid $blue
+			box-sizing: content-box
 			
 			img
 				position: absolute
@@ -65,8 +71,46 @@
 				left: 50%
 				transform: translate(-50%, -50%) 
 				width: 100%
+				
+		.user-name
+			font-size: 14px
+			
+		.user-status
+			font-size: 12px 
+			margin-bottom: 0 
 		
 
 	&__content
-		flex: 1 1 auto
+		width: -webkit-calc(100% - 120px)
+		width: calc(100% - 120px)
 		padding-left: 25px 
+		font-size: 14px  
+		
+		.content-footer
+			.total-likes
+				margin-left: 50px
+				 
+			p
+				margin-bottom: 0
+				
+		.tc-action
+			margin: 0 8px
+			color: $text
+			
+
+.reply-form
+	padding-top: 30px
+	
+	.rf-heading
+		font-size: 14px 
+		margin-bottom: 30px 
+		
+		p
+			margin-bottom: 0 
+			
+	.button-group
+		margin-top: 30px 
+		margin-bottom: 0 
+		
+		.btn
+			width: 115px

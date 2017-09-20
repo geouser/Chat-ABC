@@ -110,6 +110,18 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Slider on details pages
+    ---------------------------*/
+    $('.details-slider').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        lazyLoad: 'ondemand',
+        infinite: false     
+    })
+
 
 
     /**

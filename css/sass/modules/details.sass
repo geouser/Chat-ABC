@@ -1,0 +1,63 @@
+.details
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	
+	&__preview
+		width: 28.2%
+		
+		&__image
+			margin-bottom: 40px
+			 
+			img
+				display: block
+				max-width: 100%
+				margin: 0 auto
+				
+		&__actions
+			.btn
+				position: relative
+				padding-left: 75px
+				text-align: left
+				
+				.fa
+					position: absolute
+					top: 50%
+					left: 32.5px
+					transform: translate(-50%, -50%) 
+		
+	&__content
+		width: 71.8%
+		padding-left: 30px 
+		font-size: 14px
+		color: $text-light  
+		
+		&__slider
+			overflow: hidden
+			
+			.slick-list
+				margin: 0 -8px
+				
+			.slick-slide
+				padding: 0 8px
+				
+				img
+					width: 100%
+					display: block
+					border: 1px solid #ccc
+			
+			.slick-prev,
+			.slick-next	
+				width: 30px
+				height: 100%
+				opacity: 0
+				background-color: rgba(0, 0, 0, .5) 
+				
+			&:hover
+				.slick-prev,
+				.slick-next	
+					opacity: 1
+					
+					&.slick-disabled
+						opacity: 0.3
+				

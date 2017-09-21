@@ -48,30 +48,45 @@
 
 
 .input.file
-    position: relative
-    display: flex
+	position: relative
+	display: flex
+	padding-right: 60px 
 
-    input[type="file"] 
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0
-        bottom: 0
-        z-index: 2;
-        opacity: 0;
-        cursor: pointer;
+	input[type="file"] 
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0
+		bottom: 0
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
 
-        &::-webkit-file-upload-button
-            cursor: pointer;
+		&::-webkit-file-upload-button
+			cursor: pointer
+	
+	.fa
+		width: 40px
+		height: 100%
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		background-color: $yellow  
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #fff
+		font-size: 18px 
+		 
 
-
-    span
-        +textEnd();
-        height: 100%
-        padding: 0
-        text-align: left
-        position: relative
-        text-align: center
+	span
+		+textEnd();
+		height: 100%
+		padding: 0
+		text-align: left
+		position: relative
+		text-align: center
         

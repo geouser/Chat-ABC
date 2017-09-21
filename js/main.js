@@ -78,8 +78,12 @@ jQuery(document).ready(function($) {
         var list = $(this).siblings('.cs-list');
         var button = $(this).siblings('.cs-button');
         button.text( $(this).attr('data-placeholder') );
+
         $(this).find('option').each(function(index, el) {
             var c = $(this).is(':selected') ? 'selected' : '';
+            if ( $(this).is(':selected') ) {
+                button.text( $(this).text() );
+            }
             list.append('<li class="'+c+'"><a href="#" data-value="'+$(this).attr('value')+'">'+$(this).text()+'</a></li>')
         });
 

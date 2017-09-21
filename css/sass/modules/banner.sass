@@ -36,3 +36,31 @@
     &--gray
         &:before
             background-color: #303030 
+            
+    &--presentation
+        padding: 60px
+        p
+            line-height: 1.7 
+        h3
+            font-size: 24px
+            margin-bottom: 30px
+            font-weight: 700 
+        .banner__img 
+            text-align: left  
+        &:before
+            display: none
+        &:nth-of-type(2n)
+            .row
+                flex-direction: row-reverse
+                .banner__img 
+                    text-align: right
+        .btn
+            margin-top: 40px 
+    &.bg-white
+        background-color: #FFF 
+        color: $text 
+        h1,h2,h3,p,span,strong
+            color: $text 
+            
+.offer + .section:not(.banner) + .section.banner 
+    padding-top: 0 

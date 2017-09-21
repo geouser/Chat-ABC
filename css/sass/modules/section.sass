@@ -1,11 +1,13 @@
 .section
-	padding: 50px 0 70px
-	
+    background-size: cover
+    background-position: 50% 50%  
+    background-repeat: no-repeat
+    padding: 50px 0 70px 
+.section
 	&-title
 		color: $text
-		text-align: center
+		text-align: center	
 		margin-bottom: 45px 
-			
 		h2
 			font-size: 33px 
 			color: #666 
@@ -31,8 +33,9 @@
 				color: $text  
 				font-size: 24px 
 			p
-				margin-bottom: 35px 
 				color: $text
-				font-size: 24px 
-				font-weight: 700
+				line-height: 1.7
+				margin-bottom: 0 
+				& + *
+					margin-top: 35px  
 

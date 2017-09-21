@@ -2,6 +2,7 @@
 	display: flex
 	flex-wrap: wrap
 	width: 100%
+	margin-bottom: 30px 
 	
 	&__preview
 		width: 28.2%
@@ -61,3 +62,88 @@
 					&.slick-disabled
 						opacity: 0.3
 				
+
+
+.rating-line
+	width: 100%
+	padding: 20px 25px
+	background-color: #F8F8F8 
+	margin-bottom: 30px 
+
+
+
+
+.details-section-title
+	font-size: 24px
+	margin-bottom: 30px
+	
+
+
+
+
+.dc-comment
+	display: flex
+	flex-wrap: wrap
+	
+	&:not(:last-child)
+		margin-bottom: 25px 
+	
+	&__user
+		width: 100px
+		
+		img
+			display: block
+			width: 100%
+		
+	&__content
+		width: -webkit-calc(100% - 100px)
+		width: calc(100% - 100px)
+		padding-left: 25px 
+		font-size: 14px
+		color: $text-light 
+		
+		&__text
+			margin-top: 6px
+			
+			p:last-child
+				margin-bottom: 0 
+
+
+
+.details-comments-form
+	padding-top: 45px
+
+	.form-control
+		border-width: 1px
+		resize: none
+		
+
+.rc-course
+	display: block
+	transition: all 0.3s ease
+	
+	&:not(:last-child)
+		margin-bottom: 30px 
+
+	&__title
+		font-size: 14px
+		color: $green 
+		
+	&__preview
+		margin: 0
+		padding: 0
+		overflow: hidden
+		
+		img
+			display: block
+			width: 100%
+			transition: all 2s ease
+			
+	&:hover
+		text-decoration: none
+		opacity: 0.75
+		
+	&:hover &__preview
+		img
+			transform: scale(1.05)
+			

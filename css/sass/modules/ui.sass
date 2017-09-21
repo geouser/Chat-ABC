@@ -41,3 +41,44 @@
     border-radius: 0
     padding: 0.6rem 0.75rem
     cursor: pointer
+    
+
+.rating
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    font-size: 38px 
+    line-height: 38px 
+
+    &__points,
+    &__default
+        display: block
+        letter-spacing: 0.3em
+        color: $text-light 
+        width: 5.842em
+        
+        &:after
+            content: '\f005 \f005 \f005 \f005 \f005'
+            display: inline-block
+            font-family: FontAwesome
+            font-weight: normal 
+            font-size: inherit 
+            font-style: normal 
+            text-rendering: auto
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            
+    &__points
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+        color: #FAC917
+        white-space: nowrap
+        
+    &+label
+        margin-bottom: 0
+        display: inline-block
+        vertical-align: middle 
+        font-size: 18px 
+        margin-left: 25px 

@@ -1,5 +1,5 @@
 .page-title
-	margin: 33px 0;
+	margin: 33px 0 0;
 	
 	h1,
 	h2,
@@ -13,9 +13,20 @@
 		font-size: 24px 
 		display: inline
 		margin-bottom: 0 
-		
+	
+	p a 
+		color: inherit
+		 
 	p:after
-		content: '>'
+		content: '\f054'
+		display: inline-block
+		font: normal normal normal 14px/1 FontAwesome
+		font-size: 18px
+		font-weight: 300 
+		margin: 0 8px 0 10px
+		text-rendering: auto
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
 		
 	.wrap
 		background-color: $green 
@@ -24,15 +35,29 @@
 
 .primary-content
 	padding-bottom: 90px
+	padding-top: 33px 
 	display: flex
+	flex-wrap: wrap
+	
+	&.no-sidebar
+		display: block
 
 	@media (min-width: 1200px)
 		padding-left: 30px
 		padding-right: 30px  
-		
+	
 	.sidebar
 		width: 23.8%
 		
 	main
 		width: 76.2%
-		padding-left: 15px 
+		padding-left: 15px
+		
+	&.two-sidebars
+		main
+			width: 52.4%
+			padding-right: 15px 
+			
+		.sidebar
+			&:nth-of-type(2)
+				order: 3

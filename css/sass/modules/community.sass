@@ -36,16 +36,24 @@
 		&__description
 			margin-bottom: 0 
 			
+			span
+				margin-right: 10px 
+			
 		&__counters
 			p
 				margin-bottom: 0 
 				
 
 .tc-message
-	padding: 25px
+	padding: 15px
 	margin-right: 25px 
-	background-color: #ccc
 	display: flex
+	
+	&:not(:last-child)
+		margin-bottom: 35px 
+	
+	&:nth-child(even)
+		background-color: #F8F8F8 
 	
 	&__user
 		width: 120px
@@ -58,6 +66,7 @@
 			overflow: hidden 
 			border-radius: 50% 
 			border: 1px solid $blue
+			box-sizing: content-box
 			
 			img
 				position: absolute
@@ -65,8 +74,209 @@
 				left: 50%
 				transform: translate(-50%, -50%) 
 				width: 100%
+				
+		.user-name
+			font-size: 14px
+			
+		.user-status
+			font-size: 12px 
+			margin-bottom: 0 
 		
 
 	&__content
-		flex: 1 1 auto
+		width: -webkit-calc(100% - 120px)
+		width: calc(100% - 120px)
 		padding-left: 25px 
+		font-size: 14px  
+		
+		.content-footer
+			.total-likes
+				margin-left: 50px
+				 
+			p
+				margin-bottom: 0
+				
+		.tc-action
+			margin: 0 8px
+			color: $text
+			
+
+.reply-form
+	padding-top: 30px
+	
+	.rf-heading
+		font-size: 14px 
+		margin-bottom: 30px 
+		
+		p
+			margin-bottom: 0 
+			
+	.button-group
+		margin-top: 30px 
+		margin-bottom: 0 
+		
+		.btn
+			width: 115px
+	
+
+/* Post create form */
+.post-create
+	margin-bottom: 25px
+
+.pc-heading
+	background-color: $blue
+	height: 40px
+	line-height: 40px
+	color: #fff
+	padding: 0 15px
+	font-size: 14px 
+	
+.pc-form
+	border: 1px solid #ccc
+	border-top: 0 
+	
+	&__body,
+	&__footer
+		padding: 15px 20px
+		
+	&__footer
+		background-color: #F6F7F9 
+		border-top: 1px solid #ccc 
+		
+		.btn
+			width: 145px
+	
+	&__body
+		&__user-pic
+			display: block
+			width: 100%
+		
+	textarea.form-control
+		width: 100%
+		border-color: transparent
+		resize: none
+		height: 140px
+		color: $text-light
+		font-size: 18px 
+		transition: all 0.3s ease 
+		display: block
+		color: $text
+		border-width: 1px
+		
+		&:focus
+			border-color: #ccc
+			
+	&__body	
+		&__action-buttons
+			padding-top: 10px
+			margin-top: 10px 
+			border-top: 1px solid #ccc  
+			
+			.btn
+				background-color: #F6F7F9 
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-wrap: wrap
+				padding: 7px 15px
+				color: $text
+				
+				.placeholder
+					position: relative
+					padding-left: 30px
+					max-width: 100% 
+					line-height: 25px 
+				
+				&.file .placeholder:before,
+				&.tag-button .placeholder:before
+					content: ''
+					width: 25px
+					height: 25px
+					position: absolute
+					left: 0px
+					top: 50%  
+					transform: translateY(-50%)
+					background-size: 100%
+					background-repeat: no-repeat 
+					background-position: 50% 50% 
+						
+				&.file .placeholder:before
+					background-image: url(../images/btn-photo.png)
+					
+				&.tag-button .placeholder:before
+					background-image: url(../images/btn-tag.png)
+
+
+/* Post list message */
+.pl-message
+	border: 2px solid #ccc
+	
+	&:not(:last-child)
+		margin-bottom: 25px 
+	
+	&__body,
+	&__footer
+		padding: 15px 20px
+		
+	&__body
+		&__user-pic
+			display: block
+			width: 100%
+			
+		&__content
+			font-size: 14px
+			color: $text-light
+			padding-bottom: 60px 
+			  
+			.name
+				font-size: 14px
+				margin-bottom: 0
+				color: $blue  
+				
+			.time
+			 	font-size: 12px
+			 	margin-top: -3px 
+			 	color: $text 
+			 	
+		&__actions
+			padding-top: 10px
+			border-top: 1px solid #ccc
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: -5px 
+			
+			a
+				color: $text
+				font-size: 14px
+				transition: all 0.3s ease
+				
+				&:hover,
+				&.is-active
+					color: $blue
+					text-decoration: none
+				
+				.fa
+				 	font-size: 18px 
+				 	
+				&:not(:last-child)
+					margin-right: 60px 
+					
+	&__footer
+		border-top: 2px solid #ccc
+		background-color: #F6F7F9 
+		
+
+.comment-form
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	
+	&__user
+		width: 50px
+		margin-right: 25px
+		
+	.form-control
+		width: -webkit-calc(100% - 75px)
+		width: calc(100% - 75px)
+		height: 50px
+		color: $text

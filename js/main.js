@@ -110,8 +110,8 @@ jQuery(document).ready(function($) {
             event.preventDefault();
             event.stopPropagation();
             $('.cs-button').not($(this)).removeClass('is-active');
-            $('.cs-list').not(list).removeClass('is-active')
-            
+            $('.cs-list').not(list).removeClass('is-active');
+
             $(this).toggleClass('is-active');
             list.toggleClass('is-active');
         });

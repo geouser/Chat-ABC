@@ -109,8 +109,11 @@ jQuery(document).ready(function($) {
         button.on('click', function(event) {
             event.preventDefault();
             event.stopPropagation();
+            $('.cs-button').not($(this)).removeClass('is-active');
+            $('.cs-list').not(list).removeClass('is-active')
+            
             $(this).toggleClass('is-active');
-            $(this).siblings('.cs-list').toggleClass('is-active');
+            list.toggleClass('is-active');
         });
     }); 
 

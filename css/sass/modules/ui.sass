@@ -178,17 +178,38 @@ form
     cursor: pointer
     color: $text
     
+    &.accept
+        font-size: 12px
+        color: $text-light  
+    
     &:last-child
         margin-bottom: 0 
     
     &.custom-checkbox &-indicator
-        top: 0.05rem 
+        top: 0.75em
+        transform: translateY(-50%)
         background-color: transparent
         border: 2px solid $border 
         border-radius: 0!important
         outline: 0
         box-shadow: none
-        background-size: 10px
+        background-size: 0.75em
+        width: 1.3em
+        height: 1.3em
+        
+    &.custom-radio &-indicator
+        top: 0.75em
+        transform: translateY(-50%)
+        background-color: transparent
+        border: 2px solid $border 
+        outline: 0
+        box-shadow: none
+        background-size: 0.75em
+        width: 1.3em
+        height: 1.3em
+    
+    &-description
+        line-height: 1.5em 
         
     .custom-control-input:checked + &-indicator,
     .custom-control-input:active + &-indicator,
@@ -196,5 +217,6 @@ form
         box-shadow: none
         
     .custom-control-input:checked + &-indicator,
-        border-color: $blue
-        background-color: $blue 
+        border-color: $green
+        background-color: $green
+        

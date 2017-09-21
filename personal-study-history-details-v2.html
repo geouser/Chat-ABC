@@ -135,70 +135,56 @@
                         <!-- page-title -->
                         <div class="page-title">
                             <div class="wrap">
-                                <h1>Payment</h1>
+                                <h1>Live Chat Schedule Details</h1>
                             </div>
                         </div>
                         <!-- end page-title -->
 
                         <div class="panel-box">
 
-                            <div class="payment-panel">
+                            <div class="calendar-panel">
 
-                                <h3 class="details-title text-success">My Wallet</h3>
-                                
                                 <table class="details-table">
                                     <tbody>
                                         <tr>
-                                            <td>In you wallet</td>
-                                            <td>0 Points</td>
+                                            <td>Teacher Name</td>
+                                            <td>Helen</td>
                                         </tr>
                                         <tr>
-                                            <td>Last brought points</td>
-                                            <td>0</td>
+                                            <td>Lesson</td>
+                                            <td>Airport Check-in</td>
                                         </tr>
                                         <tr>
-                                            <td>Last spent points</td>
-                                            <td>0</td>
+                                            <td>Catergory</td>
+                                            <td>International Level</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Level</td>
+                                            <td>Advance Level</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date</td>
+                                            <td>Jan 29 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Time</td>
+                                            <td>12:00 AM to 12:10 AM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td>New/Revision/Remaining</td>
                                         </tr>
                                     </tbody>
                                 </table>
 
-                                <div class="double-actions">
-                                    <a href="#buy-points" class="btn btn-success font-weight-bold text-uppercase fancybox">Buy now</a>
-                                    <div class="btn btn-link font-weight-bold text-uppercase" style="cursor: default;">1 POINT = 1 CNY</div>
-                                    
+                                <div class="double-actions text-right">
+                                    <a href="personal-study-history.html" class="btn btn-link font-weight-bold text-uppercase">Back</a>
+                                    <a href="" class="btn btn-primary font-weight-bold text-uppercase">Add teacher to favorite list</a>
                                 </div>
 
-                            </div> <!-- end payment-panel -->
+                            </div> <!-- end calendar-panel -->
 
                         </div> <!-- end panel-box -->
-
-                        <div class="row">
-                            <div class="col col-md-6">
-                                <div class="payment-option">
-                                    <div class="payment-option__icon bg-warning">
-                                        <img src="images/ien-icon.png" alt="">
-                                    </div>
-                                    <div class="payment-option__description">
-                                        <p>Total Expenses</p>
-                                        <p><strong>100 CNY</strong></p>
-                                        <p><a href="#">More info</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-md-6">
-                                <div class="payment-option">
-                                    <div class="payment-option__icon bg-danger">
-                                        <img src="images/pig-icon.png" alt="">
-                                    </div>
-                                    <div class="payment-option__description">
-                                        <p>Total Deposit</p>
-                                        <p><strong>500 CNY</strong></p>
-                                        <p><a href="#">More info</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     </main>  <!-- end dashbord-panel -->
 
@@ -243,29 +229,17 @@
 
 
 
-        <div id="buy-points" class="fncb-hide zoom-anim-dialog popup payment-popup no-close">
-            <div class="payment-icon">
-                <i class="fa fa-usd" aria-hidden="true"></i>
-            </div>
-            <form action="">
-                <div class="form-group">
-                    <label for="">Select amount of points</label>
-                    <select name="points_to_buy" id="" class="custom-select" data-placeholder="Select amount of points">
-                        <option value="10">10</option>
-                        <option value="20">20</option>
-                        <option value="30">30</option>
-                        <option value="40">40</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                        <option value="200">200</option>
-                        <option value="500">500</option>
-                    </select>
-                </div>
-                <div class="form-group mb-0 text-right">
-                    <button class="btn btn-primary btn-block text-uppercase font-weight-bold">Pay wia wechat</button>
-                </div>
-            </form>
-        </div> <!-- end add sub category -->
+        <div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
+
+        <div id="modal-popup-ok" class="fncb-hide zoom-anim-dialog popup result">
+            <p class="heading">Спасибо!</p>
+            <p class="msg">Ваше сообщение было успешно отправлено. Мы свяжемся с Вами в ближайшее время!</p>
+        </div>
+
+        <div id="modal-popup-error" class="fncb-hide zoom-anim-dialog popup result">
+            <p class="heading">Возникла ошибка при отправке Вашего запроса.</p>
+            <p class="msg">Пожалуйста, проверьте правильность внесённых данных и попробуйте снова!</p>
+        </div>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk"></script>

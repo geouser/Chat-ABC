@@ -70,16 +70,29 @@ jQuery(document).ready(function($) {
                                   Custom select
     ---------------------------*/
     $('.custom-select').each(function(index, el) {
-        var select = $(this);
-        $(this).css('display', 'none');
-        $(this).wrap('<div class="select"></div>')
-        $(this).parent().prepend('<ul class="cs-list"></ul>');
-        $(this).parent().prepend('<a class="cs-button btn" tabindex="-1"></a>');
-        var list = $(this).siblings('.cs-list');
-        var button = $(this).siblings('.cs-button');
-        button.text( $(this).attr('data-placeholder') );
+        makeSelect( $(this) );
+    });
 
-        $(this).find('option').each(function(index, el) {
+
+    /**
+     *
+     * Creates custom select
+     *
+     * @param select {Object} jQuery object ( $('.custom-select') )
+     *
+     * @return n/a
+     *
+    */
+    function makeSelect( select ) {
+        select.css('display', 'none');
+        select.wrap('<div class="select"></div>')
+        select.parent().prepend('<ul class="cs-list"></ul>');
+        select.parent().prepend('<a class="cs-button btn" tabindex="-1"></a>');
+        var list = select.siblings('.cs-list');
+        var button = select.siblings('.cs-button');
+        button.text( select.attr('data-placeholder') );
+
+        select.find('option').each(function(index, el) {
             var c = $(this).is(':selected') ? 'selected' : '';
             if ( $(this).is(':selected') ) {
                 button.text( $(this).text() );
@@ -87,7 +100,7 @@ jQuery(document).ready(function($) {
             list.append('<li class="'+c+'"><a href="#" data-value="'+$(this).attr('value')+'">'+$(this).text()+'</a></li>')
         });
 
-        if ( !$(this).hasClass('links-select') ) {
+        if ( !select.hasClass('links-select') ) {
             list.find('a').on('click', function(event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -119,8 +132,8 @@ jQuery(document).ready(function($) {
             $(this).toggleClass('is-active');
             list.toggleClass('is-active');
         });
-    }); 
-
+    }
+    /* close all selects if user clicked somwhere on the page */
     $(window).click(function() {
         $('.cs-button, .cs-list').removeClass('is-active');
     });

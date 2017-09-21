@@ -65,6 +65,60 @@ jQuery(document).ready(function($) {
             
         });
     });
+
+    /*---------------------------
+                                  Custom select
+    ---------------------------*/
+    $('.custom-select').each(function(index, el) {
+        var select = $(this);
+        $(this).css('display', 'none');
+        $(this).wrap('<div class="select"></div>')
+        $(this).parent().prepend('<ul class="cs-list"></ul>');
+        $(this).parent().prepend('<a class="cs-button btn" tabindex="-1"></a>');
+        var list = $(this).siblings('.cs-list');
+        var button = $(this).siblings('.cs-button');
+        button.text( $(this).attr('data-placeholder') );
+        $(this).find('option').each(function(index, el) {
+            var c = $(this).is(':selected') ? 'selected' : '';
+            list.append('<li class="'+c+'"><a href="#" data-value="'+$(this).attr('value')+'">'+$(this).text()+'</a></li>')
+        });
+
+        if ( !$(this).hasClass('links-select') ) {
+            list.find('a').on('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                var val = $(this).attr('data-value');
+                var text = $(this).text();
+                button.text(text);
+                select.val(val);
+                list.find('li').removeClass('selected');
+                $(this).parents('li').addClass('selected')
+                list.removeClass('is-active');
+                button.removeClass('is-active');
+            });
+        } else {
+            list.find('a').on('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.location.href = $(this).attr('data-value');
+                list.removeClass('is-active');
+                button.removeClass('is-active');
+            })
+        }
+
+        button.on('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $(this).toggleClass('is-active');
+            $(this).siblings('.cs-list').toggleClass('is-active');
+        });
+    }); 
+
+    $(window).click(function() {
+        $('.cs-button, .cs-list').removeClass('is-active');
+    });
+
+
     
     /*---------------------------
                                 PAGE ANCHORS
@@ -93,6 +147,13 @@ jQuery(document).ready(function($) {
     $('.fancybox').fancybox({
         
     });
+
+    $('.js-close-popup').on('click', function(event) {
+        event.preventDefault();
+        $.fancybox.close();
+    });
+
+
 
     /*---------------------------
                                   Widget show more

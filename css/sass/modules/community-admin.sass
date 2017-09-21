@@ -1,0 +1,62 @@
+.top-search
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 25px 
+	
+	.form-control
+		width: -webkit-calc(100% - 90px)
+		width: calc(100% - 90px)
+		
+	.btn
+		width: 80px
+		margin-left: 10px 
+		
+
+.admin-actions
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 50px 
+	
+	.select-actions
+		width: 225px
+		margin-right: 30px 
+		
+	.btn
+		padding-left: 2rem
+		padding-right: 2rem  
+		
+
+.list-table
+	width: 100%
+	font-size: 14px 
+	
+	th,
+	td
+		padding: 0.5rem 0.75rem
+		
+		&:first-child
+			padding-left: 30px
+			 	
+	thead
+		color: $text-light
+		
+		th
+			font-weight: 400
+			
+	tbody
+		tr
+			&:nth-child(odd)
+				background-color: #F9F9F9
+				
+		td
+			vertical-align: top 
+			
+			.cell-title
+				display: none
+				
+	.btn-action
+		&:not(:last-child)
+			margin-right: 10px
+			
+	& + nav
+		margin-top: 30px 

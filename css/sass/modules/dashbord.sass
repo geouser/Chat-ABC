@@ -388,3 +388,146 @@
 			
 			&:last-child
 				margin-bottom: 0 
+				
+
+.letter-filter
+	font-size: 14px
+	padding: 0 15px
+
+	li
+		display: inline-block
+		margin: 0 0.1em
+		
+		&.all
+			&:after
+				content: '|'
+				margin-left: 0.3em
+		
+		&.active
+			a
+				color: $text
+				
+
+
+.word-list
+	margin: 0 -15px
+	font-size: 14px 
+	
+	li
+		list-style: none 
+		
+		a
+			padding: 0.5em 2em 0.5em 0.75em
+			border-bottom: 1px solid $border
+			display: block
+			transition: all 0.3s ease
+			color: $text
+			position: relative
+			
+			&:hover
+				text-decoration: none
+				background-color: #F8F8F8
+				
+			.fa
+				font-size: 16px
+				color: $green
+				position: absolute
+				top: 50%
+				right: 5px
+				transform: translateY(-50%)  
+	
+	& + nav
+		padding: 0!important
+
+
+
+.video-list
+	margin: 0 -15px
+	font-size: 14px
+	
+	& + nav
+		padding: 0!important
+	
+		
+.video-item
+	display: flex
+	align-items: flex-start
+	border-bottom: 1px solid $border
+	padding: 10px 15px
+	
+
+	&__link
+		width: 125px
+		position: relative
+		overflow: hidden
+		
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			z-index: 1 
+			top: 0
+			left: 0
+			right: 0 
+			bottom: 0
+			background-color: #000
+			opacity: 0.4
+			transition: all 0.3s ease  
+		
+		
+		.fa
+			position: absolute
+			z-index: 2 
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%) 
+			width: 38px
+			height: 38px
+			color: #000
+			background-color: #FFF
+			border-radius: 50% 
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 18px 
+			transition: all 0.3s ease
+			
+			&:before
+				margin-left: 2px 
+
+		img
+			display: block
+			width: 100%
+			
+		&:hover
+			&:before
+				opacity: 0.5
+				
+			.fa
+				transform: translate(-50%, -50%) scale(1.05)
+				
+	&__description
+		padding-left: 25px
+		padding-top: 8px  
+		width: -webkit-calc(100% - 125px)
+		width: calc(100% - 125px)
+		font-size: 12px 
+		
+		&__row
+			display: flex
+			align-items: flex-start
+			
+			&:not(:last-child)
+				margin-bottom: 10px 
+			
+			span
+				width: 50%
+				
+				&.label
+					padding-right: 15px
+				
+				&.value
+					padding-left: 15px
+					text-align: right  
+				

@@ -1,0 +1,40 @@
+.teacher-card
+	background-color: #F9F9F9
+	padding: 35px
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap 
+	
+	&:not(:last-child)
+		margin-bottom: 40px 
+	
+	&__avatar
+		width: 200px
+		border-radius: 50%
+		overflow: hidden
+		
+		img
+			display: block
+			width: 100%
+			
+	&__description
+		padding-left: 35px
+		width: -webkit-calc(100% - 200px) 
+		width: calc(100% - 200px) 
+		font-size: 14px 
+		
+		&__name
+			color: $green
+			font-size: 18px  
+			
+		&__info
+			li
+				list-style-type: none 
+				margin-bottom: 2px 
+				
+				span + span
+					padding-left: 15px 
+		
+
+.teachers-intro-list
+	margin-bottom: 60px 

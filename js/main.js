@@ -108,6 +108,7 @@ jQuery(document).ready(function($) {
                 var text = $(this).text();
                 button.text(text);
                 select.val(val);
+                select.trigger('change');
                 list.find('li').removeClass('selected');
                 $(this).parents('li').addClass('selected')
                 list.removeClass('is-active');
@@ -137,7 +138,6 @@ jQuery(document).ready(function($) {
     $(window).click(function() {
         $('.cs-button, .cs-list').removeClass('is-active');
     });
-
 
     
     /*---------------------------

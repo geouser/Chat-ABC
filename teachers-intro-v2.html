@@ -93,10 +93,58 @@
                     
                     <div class="top-filters">
                         <div class="row">
-                            <div class="col col-md-8"></div>
+                            <div class="col-12 col-lg-3">
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="text" name="s" placeholder="Search teacher name here..." class="form-control">
+                                    </div>    
+                                </form>
+                            </div>
+                            <div class="col-12 col-lg-9">
+                                <form action="" class="teacher-filter-form">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <p class="tf-label">Showing: </p>
+                                                <label class="button-radio">
+                                                    <input type="radio" name="online_status" value="all" checked="">
+                                                    <span>All</span>
+                                                </label>
+                                                <label class="button-radio">
+                                                    <input type="radio" name="online_status" value="online">
+                                                    <span>Online</span>
+                                                </label>
+                                                <label class="button-radio">
+                                                    <input type="radio" name="online_status" value="offline">
+                                                    <span>Offline</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group text-lg-right">
+                                                <p class="tf-label">Filter by gender: </p>
+                                                <label class="button-radio">
+                                                    <input type="radio" name="gender" value="all" checked="">
+                                                    <span>All</span>
+                                                </label>
+                                                <label class="button-radio">
+                                                    <input type="radio" name="gender" value="male">
+                                                    <span>Male</span>
+                                                </label>
+                                                <label class="button-radio">
+                                                    <input type="radio" name="gender" value="female">
+                                                    <span>Female</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    </div> <!-- end top-filters -->
                     
+
+
                     <div class="teachers-intro-list">
 
                         <div class="teacher-card">
@@ -128,7 +176,7 @@
                                     </ul>
                                 </div>
                                 <div class="teacher-card__description__actions">
-                                    <a href="" class="btn btn-primary text-uppercase">MAKE AN APPOINTMENT</a>
+                                    <a href="" class="btn btn-primary text-uppercase"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Favorite teachers list</a>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +209,7 @@
                                     </ul>
                                 </div>
                                 <div class="teacher-card__description__actions">
-                                    <a href="" class="btn btn-primary text-uppercase">MAKE AN APPOINTMENT</a>
+                                    <a href="" class="btn btn-primary text-uppercase"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Favorite teachers list</a>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +242,7 @@
                                     </ul>
                                 </div>
                                 <div class="teacher-card__description__actions">
-                                    <a href="" class="btn btn-primary text-uppercase">MAKE AN APPOINTMENT</a>
+                                    <a href="" class="btn btn-primary text-uppercase"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Favorite teachers list</a>
                                 </div>
                             </div>
                         </div>
@@ -227,16 +275,23 @@
                                     </ul>
                                 </div>
                                 <div class="teacher-card__description__actions">
-                                    <a href="" class="btn btn-primary text-uppercase">MAKE AN APPOINTMENT</a>
+                                    <a href="" class="btn btn-primary text-uppercase"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Favorite teachers list</a>
                                 </div>
                             </div>
                         </div>
 
                     </div> <!-- end teachers-intro-list -->
 
-                    <div class="double-actions text-center">
-                        <a href="#" class="btn btn-success text-uppercase font-weight-bold">Show more teachers</a>
-                    </div>
+                    <nav aria-label="Community pagination">
+                        <ul class="pagination">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        </ul>
+                    </nav> 
 
 
                 </div> <!-- end primary-content -->
@@ -249,28 +304,32 @@
         <!-- footer -->
         <footer class="footer">
             <div class="container text-center">
+                
+                <div class="footer-menus">
+                    <nav class="footer-menu top-menu">
+                        <ul>
+                            <li><a href="#">MEMBER</a></li>
+                            <li><a href="#">COURSE</a></li>
+                            <li><a href="#">WORKSPACE</a></li>
+                            <li><a href="#">TEACHER</a></li>
+                        </ul>
+                    </nav> <!-- end footer-menu -->
 
-                <nav class="footer-menu">
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="app.html">OUR APP</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li><a href="cources.html">OUR COURSES</a></li>
-                        <li><a href="teachers.html">OUR TEACHERS</a></li>
-                        <li><a href="members.html">MEMBERS</a></li>
-                    </ul>
-                </nav> <!-- end footer-menu -->
+                    <nav class="footer-menu bottom-menu">
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">OUR APP</a></li>
+                            <li><a href="#">OUR VIDEOS</a></li>
+                            <li><a href="#">OUR CURRICULUM</a></li>
+                            <li><a href="#">CARRERS</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                    </nav> <!-- end footer-menu -->    
+                </div>
+                
 
                 <div class="footer-copyright">
                     <p>Copyright © CHATCHAT ABC | <a href="">Privacy Statement</a> | <a href="">User Agreement</a> | equipment 11080414</p>
-                </div>
-
-                <div class="footer-phone">
-                    <p>Call us: <a href="tel:1000-15-13-15">1000-15-13-15</a> (09:00-23:00)</p>
-                </div>
-
-                <div class="footer-address">
-                    <address>Company Address: (Beijing) Awesome Street, Beijing on the seventh floor of a stunning building 8 South Zip code: 100085</address>
                 </div>
 
             </div>
@@ -278,22 +337,7 @@
         <!-- end footer -->
 
 
-
-        <div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
-
-        <div id="modal-popup-ok" class="fncb-hide zoom-anim-dialog popup result">
-            <p class="heading">Спасибо!</p>
-            <p class="msg">Ваше сообщение было успешно отправлено. Мы свяжемся с Вами в ближайшее время!</p>
-        </div>
-
-        <div id="modal-popup-error" class="fncb-hide zoom-anim-dialog popup result">
-            <p class="heading">Возникла ошибка при отправке Вашего запроса.</p>
-            <p class="msg">Пожалуйста, проверьте правильность внесённых данных и попробуйте снова!</p>
-        </div>
-
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk"></script>
-
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>

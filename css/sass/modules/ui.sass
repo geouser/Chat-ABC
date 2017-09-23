@@ -230,3 +230,45 @@ form
         border-color: $green
         background-color: $green
         
+
+
+
+.button-radio    
+    margin-bottom: 0
+    
+    input
+        display: none
+        
+        &:checked + span
+            background-color: $blue
+            color: #fff 
+        
+    span
+        padding: 8px 7px
+        display: block
+        cursor: pointer
+        transition: all 0.3s ease
+        
+        &:hover
+            background-color: #F9F9F9 
+    
+
+
+.online-status
+    position: relative
+    display: inline-block
+
+    &.online
+        font-size: 0
+        color: transparent
+        
+        &:after
+            content: ''
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: $green 
+            display: block
+            
+    &.offline
+        color: $text-light

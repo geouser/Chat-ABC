@@ -113,6 +113,7 @@ jQuery(document).ready(function($) {
                 $(this).parents('li').addClass('selected')
                 list.removeClass('is-active');
                 button.removeClass('is-active');
+                $('.select').removeClass('is-active');
             });
         } else {
             list.find('a').on('click', function(event) {
@@ -121,17 +122,21 @@ jQuery(document).ready(function($) {
                 window.location.href = $(this).attr('data-value');
                 list.removeClass('is-active');
                 button.removeClass('is-active');
+                $('.select').removeClass('is-active');
             })
         }
 
         button.on('click', function(event) {
             event.preventDefault();
             event.stopPropagation();
+           
             $('.cs-button').not($(this)).removeClass('is-active');
             $('.cs-list').not(list).removeClass('is-active');
 
             $(this).toggleClass('is-active');
             list.toggleClass('is-active');
+            $(this).parents('.select').toggleClass('is-active');
+            $('.select').not($(this).parents('.select')).removeClass('is-active');
         });
     }
     /* close all selects if user clicked somwhere on the page */
@@ -159,6 +164,11 @@ jQuery(document).ready(function($) {
         $(this).siblings('header').toggleClass('open');
     });
 
+
+    $('.js-toggle-sidebar-menu').on('click', function(event) {
+        event.preventDefault();
+        $(this).siblings('ul').slideToggle();
+    }); 
 
 
     /*---------------------------
@@ -200,7 +210,23 @@ jQuery(document).ready(function($) {
         slidesToShow: 4,
         slidesToScroll: 1,
         lazyLoad: 'ondemand',
-        infinite: false     
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            }
+        ]   
     })
 
 

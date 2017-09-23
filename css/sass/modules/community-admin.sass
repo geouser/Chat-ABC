@@ -21,6 +21,11 @@
 		width: 225px
 		margin-right: 30px 
 		
+		@media (max-width: 991px)
+			width: 100%
+			margin-right: 0 
+			margin-bottom: 20px 
+		
 	.btn
 		padding-left: 2rem
 		padding-right: 2rem  
@@ -34,8 +39,9 @@
 	td
 		padding: 0.5rem 0.75rem
 		
-		&:first-child
-			padding-left: 30px
+		@media (min-width: 768px)
+			&:first-child
+				padding-left: 30px
 			 	
 	thead
 		color: $text-light
@@ -54,9 +60,25 @@
 			.cell-title
 				display: none
 				
+				@media (max-width: 767px)
+					display: block
+					color: $text-light
+				
 	.btn-action
 		&:not(:last-child)
 			margin-right: 10px
 			
 	& + nav
 		margin-top: 30px 
+		
+
+	@media (max-width: 767px)
+		border: 1px solid $border
+		
+		thead
+			display: none
+			
+		tr,
+		td,
+		th
+			display: block

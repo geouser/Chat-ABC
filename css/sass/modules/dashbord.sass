@@ -7,14 +7,30 @@
 		width: 25%
 		background-color: #1F1F1F 
 		
+		@media (max-width: 991px)
+			width: 100%
+			margin-bottom: 20px 
+		
 	&-panel
 		width: 75%
 		padding: 30px 35px 60px
 		background-color: #F8F8F8 
 		
+		@media (max-width: 1199px)
+			padding: 20px 20px 50px
+			
+		@media (max-width: 991px)
+			width: 100%
+			
+		@media (max-width: 767px)
+			padding: 10px 10px 40px
+		
 	.page-title
 		margin-top: 0 
 		margin-bottom: 30px 
+		
+		@media (max-width: 1199px)
+			margin-bottom: 20px 
 		
 	
 		
@@ -22,6 +38,9 @@
 .dashbord-sidebar
 	&__user-pic
 		padding: 30px 0
+		
+		@media (max-width: 991px)
+			padding: 20px 0
 		
 		figure
 			width: 65px
@@ -36,6 +55,34 @@
 				
 .dashbord-menu
 	font-size: 14px
+	
+	.dm-button
+		display: none
+		
+		@media (max-width: 991px)
+			display: block
+			width: 100%
+			padding: 8px
+			color: #fff
+			border: 0
+			background-color: #000
+			
+			&:active,
+			&:focus
+				outline: 0
+			
+			.fa
+				margin-right: 10px 
+				
+	
+	ul
+		@media (min-width: 992px)
+			display: block!important
+			
+		@media (max-width: 991px)
+			display: none
+			margin-bottom: 0
+
 	
 	.fa-play:before
 		margin-left: 2px 
@@ -105,7 +152,14 @@
 	display: flex
 	align-items: stretch
 	justify-content: space-between
+	flex-wrap: wrap
 	margin-bottom: 30px
+	
+	@media (max-width: 1199px)
+		margin-bottom: 20px 
+		
+	@media (max-width: 991px)
+		margin-bottom: 0 
 	
 	.dc-card
 		text-align: center
@@ -118,6 +172,15 @@
 		font-weight: 700 
 		border: 1px solid $border
 		text-decoration: none
+		
+		@media (max-width: 1199px)
+			padding: 15px
+			width: 23.5%
+			font-size: 16px 
+			
+		@media (max-width: 991px)
+			width: 48%
+			margin-bottom: 20px 
 		 
 		
 		&__icon
@@ -140,6 +203,13 @@
 	background-color: #FFF
 	padding: 30px
 	margin-bottom: 30px 
+	
+	@media (max-width: 1199px)
+		padding: 15px
+		margin-bottom: 20px 
+		
+	@media (max-width: 767px)
+		padding: 10px
 	
 	hr
 		border: 0
@@ -176,15 +246,28 @@
 		width: 50%
 		padding-right: 15px
 		
+		@media (max-width: 767px) 
+			padding: 0 8px
+			text-align: center
+		
 		&__item
 			font-size: 48px
 			color: $text-light
 			line-height: 48px 
 			height: 48px
 			
+			@media (max-width: 767px)
+				font-size: 36px
+				line-height: 36px
+				height: 36px  
+			
 			img
 				display: block
 				max-width: 100% 
+				
+				@media (max-width: 767px)
+					margin-left: auto 
+					margin-right: auto 
 				
 		&__label
 			font-size: 14px
@@ -224,16 +307,25 @@
 
 	h3
 		font-size: 24px 
-		margin-bottom: 25px 
+		
+		@media (min-width: 768px)
+			margin-bottom: 25px 
 		
 	p:last-child
 		margin-bottom: 0 
+		
+	@media (max-width: 767px)
+		.btn
+			margin-top: 20px 
 		
 
 
 .filter-panel
 	.fp-filter
 		margin-bottom: 50px
+		
+		@media (max-width: 767px)
+			margin-bottom: 30px 
 		
 	.fp-title
 		font-size: 18px
@@ -242,10 +334,16 @@
 		
 	.fp-list	
 		padding: 0 15px	
+		
+		@media (max-width: 767px)
+			padding: 0
 					
 		& + nav
 			margin-top: 30px 
 			padding: 0 15px
+			
+			@media (max-width: 767px)
+				padding: 0
 	
 
 
@@ -258,16 +356,33 @@
 	margin-left: -15px
 	margin-right: -15px  
 	
+	@media (max-width: 767px)
+		margin-left: -5px
+		margin-right: -5px  
+	
 	.bl-item
 		width: 33.33%
 		padding: 0 15px
 		font-size: 14px 
 		margin-bottom: 15px 
 		
+		@media (max-width: 767px)
+			padding: 0 5px 
+			font-size: 13px 
+			
+		@media (max-width: 575px)
+			width: 50%
+			
+		@media (max-width: 400px)
+			width: 100%
+		
 		.content
 			background-color: #F9F9F9
 			position: relative
 			padding: 6px 15px 6px 50px
+			
+			@media (max-width: 767px)
+				padding-left: 40px 
 			
 			.fa
 				color: $blue
@@ -276,6 +391,9 @@
 				left: 25px 
 				transform: translate(-50%, -50%)
 				
+				@media (max-width: 767px)
+					left: 20px 
+				
 
 
 
@@ -283,10 +401,21 @@
 	font-size: 14px
 	width: 100%
 	
+	@media (max-width: 575px)
+		font-size: 13px 
+		
+		tr:nth-child(odd)
+			background-color: #f9f9f9 
+	
 	td
 		width: 50%
 		padding: 0.5rem 0
 		border-bottom: 1px solid $border
+		vertical-align: top 
+		
+		@media (max-width: 575px)
+			padding-left: 5px
+			padding-right: 5px  
 		
 		&:first-child
 			color: $text-light
@@ -295,6 +424,9 @@
 			text-align: right
 			font-weight: 700
 			color: $text
+			
+			@media (max-width: 575px)
+				text-align: left
 
 	& + .double-actions
 		margin-top: 30px 
@@ -307,11 +439,20 @@
 
 .double-actions
 	.btn
-		padding-left: 45px
-		padding-right: 45px
+		@media (min-width: 576px)
+			padding-left: 45px
+			padding-right: 45px
+		
+		@media (max-width: 575px)
+			font-size: 13px 
+			padding: 0.4rem 0.6rem
 		
 		&-link
 			color: $text
+			
+			@media (max-width: 575px)
+				background-color: #868e96
+				color: #fff
 		
 
 .teachers-list
@@ -347,10 +488,17 @@
 	flex-wrap: wrap
 	margin-bottom: 30px 
 	
+	@media (max-width: 575px)
+		margin-bottom: 20px 
+	
 	&__icon
 		width: 130px
 		height: 130px
 		position: relative
+		
+		@media (max-width: 575px)
+			width: 90px
+			height: 90px
 		
 		img
 			position: absolute
@@ -365,8 +513,16 @@
 		width: calc(100% - 130px)
 		padding: 0 15px
 		
+		@media (max-width: 575px)
+			font-size: 14px 
+			width: -webkit-calc(100% - 90px)
+			width: calc(100% - 90px)
+		
 		p
 			margin-bottom: 6px 
+			
+			@media (max-width: 575px)
+				margin-bottom: 0 
 			
 			&:last-child
 				margin-bottom: 0 
@@ -375,6 +531,9 @@
 .letter-filter
 	font-size: 14px
 	padding: 0 15px
+	
+	@media (max-width: 767px)
+		padding: 0
 
 	li
 		display: inline-block
@@ -395,6 +554,9 @@
 	margin: 0 -15px
 	font-size: 14px 
 	
+	@media (max-width: 767px)
+		margin: 0
+	
 	li
 		list-style: none 
 		
@@ -405,6 +567,10 @@
 			transition: all 0.3s ease
 			color: $text
 			position: relative
+			
+			@media (max-width: 767px)
+				padding-left: 0
+				padding-right: 0  
 			
 			&:hover
 				text-decoration: none
@@ -427,6 +593,9 @@
 	margin: 0 -15px
 	font-size: 14px
 	
+	@media (max-width: 767px)
+		margin: 0
+	
 	& + nav
 		padding: 0!important
 	
@@ -437,11 +606,18 @@
 	border-bottom: 1px solid $border
 	padding: 10px 15px
 	
+	@media (max-width: 767px)
+		padding-left: 0
+		padding-right: 0  
+	
 
 	&__link
 		width: 125px
 		position: relative
 		overflow: hidden
+		
+		@media (max-width: 575px)
+			width: 80px
 		
 		&:before
 			content: ''
@@ -496,9 +672,16 @@
 		width: calc(100% - 125px)
 		font-size: 12px 
 		
+		@media (max-width: 575px)
+			width: -webkit-calc(100% - 80px)
+			width: calc(100% - 80px)
+			padding-left: 15px 
+			padding-top: 0 
+		
 		&__row
 			display: flex
 			align-items: flex-start
+			flex-wrap: wrap
 			
 			&:not(:last-child)
 				margin-bottom: 10px 
@@ -506,10 +689,21 @@
 			span
 				width: 50%
 				
+				@media (max-width: 575px)
+					width: 100%
+				
 				&.label
 					padding-right: 15px
+					
+					@media (max-width: 575px)
+						padding-right: 0
+						font-weight: 700  
 				
 				&.value
 					padding-left: 15px
 					text-align: right  
+					
+					@media (max-width: 575px)
+						text-align: left
+						padding-left: 0 
 				

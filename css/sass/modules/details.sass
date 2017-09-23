@@ -7,6 +7,9 @@
 	&__preview
 		width: 28.2%
 		
+		@media (max-width: 991px)
+			width: 100%
+		
 		&__image
 			margin-bottom: 40px
 			 
@@ -16,22 +19,32 @@
 				margin: 0 auto
 				
 		&__actions
-			.btn
-				position: relative
-				padding-left: 75px
-				text-align: left
-				
-				.fa
-					position: absolute
-					top: 50%
-					left: 32.5px
-					transform: translate(-50%, -50%) 
+			.fa
+				margin-right: 10px
+				 
+			@media (min-width: 1200px)
+				.btn
+					position: relative
+					padding-left: 75px
+					text-align: left
+					
+					.fa
+						position: absolute
+						top: 50%
+						left: 32.5px
+						transform: translate(-50%, -50%) 
+						
 		
 	&__content
 		width: 71.8%
 		padding-left: 30px 
 		font-size: 14px
 		color: $text-light  
+		
+		@media (max-width: 991px)
+			width: 100%
+			padding-left: 0
+			padding-top: 40px  
 		
 		&__description
 			margin-bottom: 45px
@@ -46,6 +59,7 @@
 					font-size: 18px
 					color: $green
 					margin-bottom: 0
+					max-width: 80% 
 					
 				.online-status
 					margin-left: 20px 
@@ -53,10 +67,16 @@
 			&__list
 				li
 					list-style-type: none 
-					margin-bottom: 2px 
 					
-					span + span
-						padding-left: 15px 
+					@media (min-width: 768px)
+						margin-bottom: 2px 
+						
+						span + span
+							padding-left: 15px 
+							
+					@media (max-width: 767px)
+						span
+							display: block
 			 
 			&__text
 				p:last-child
@@ -99,6 +119,9 @@
 				opacity: 0
 				background-color: rgba(0, 0, 0, .5) 
 				
+				@media (max-width: 991px)
+					opacity: 1
+				
 			&:hover
 				.slick-prev,
 				.slick-next	
@@ -114,6 +137,25 @@
 	padding: 20px 25px
 	background-color: #F8F8F8 
 	margin-bottom: 30px 
+	
+	@media (max-width: 991px)
+		font-size: 14px
+		
+	@media (max-width: 575px)
+		text-align: center
+		 
+	.rating
+		font-size: 24px
+		line-height: 24px
+		
+		& + label
+			font-size: 14px 
+			margin-left: 10px 
+			
+			@media (max-width: 575px)
+				display: block
+				margin-left: 0 
+				margin-bottom: 15px 
 
 
 
@@ -121,6 +163,12 @@
 .details-section-title
 	font-size: 24px
 	margin-bottom: 30px
+	
+	@media (max-width: 991px)
+		font-size: 22px 
+		
+	@media (max-width: 767px)
+		font-size: 20px 
 	
 
 
@@ -136,6 +184,12 @@
 	&__user
 		width: 100px
 		
+		@media (max-width: 991px)
+			width: 80px
+			
+		@media (max-width: 767px)
+			width: 40px
+		
 		img
 			display: block
 			width: 100%
@@ -146,6 +200,17 @@
 		padding-left: 25px 
 		font-size: 14px
 		color: $text-light 
+		
+		@media (max-width: 991px)
+			width: -webkit-calc(100% - 80px)
+			width: calc(100% - 80px)
+			padding-left: 20px 
+			font-size: 13px 
+			
+		@media (max-width: 767px)
+			width: -webkit-calc(100% - 40px)
+			width: calc(100% - 40px)
+			padding-left: 15px 
 		
 		&__text
 			margin-top: 6px
@@ -162,6 +227,12 @@
 		border-width: 1px
 		resize: none
 		
+
+.details-videos,
+.related-courses
+	@media (max-width: 767px)
+		padding-top: 50px 
+
 
 .dv-video,
 .rc-course

@@ -17,13 +17,31 @@
 
 .simple-tabs
     .nav-tabs
+        @media (max-width: 767px)
+            margin: 0 -5px 5px
+
         .nav-link
             background-color: transparent 
             color: #003333
             border-radius: 0!important
+
             &.active
                 color: $blue
                 background-color: #fff 
+            
+            @media (max-width: 767px)
+                margin: 5px
+                font-size: 13px
+                padding: 6px 10px
+                background-color: #868e96
+                color: #fff  
+                
+                &.active
+                    background-color: $blue
+                    color: #fff 
+            
+
+            
 
 
 .pagination
@@ -106,6 +124,9 @@ form
 .select
     position: relative
     z-index: 1 
+    
+    &.is-active
+        z-index: 10 
 
     .cs-button
         display: block

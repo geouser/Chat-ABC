@@ -14,6 +14,9 @@
 			font-size: 14px 
 			display: block
 			margin-top: -5px 
+			
+			@media (max-width: 767px)
+				margin-bottom: 20px 
 		
 
 .items-list
@@ -24,6 +27,9 @@
 		padding:  20px 25px
 		font-size: 14px 
 		font-weight: 400 
+		
+		@media (max-width: 767px)
+			padding: 15px
 		
 		&:not(:last-child)
 			margin-bottom: 25px 
@@ -43,11 +49,20 @@
 			p
 				margin-bottom: 0 
 				
+			@media (max-width: 767px)
+				padding-top: 10px 
+				text-align: left
+				
 
 .tc-message
 	padding: 15px
-	margin-right: 25px 
 	display: flex
+	flex-wrap: wrap
+	
+	@media (min-width: 1200px)
+		margin-right: 25px 
+		
+
 	
 	&:not(:last-child)
 		margin-bottom: 35px 
@@ -59,6 +74,13 @@
 		width: 120px
 		text-align: center
 		
+		@media (max-width: 767px)
+			width: 80px
+		@media (max-width: 575px)
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 20px
+			   
 		.user-pic
 			width: 100%
 			padding-top: 100%
@@ -89,6 +111,16 @@
 		padding-left: 25px 
 		font-size: 14px  
 		
+		@media (max-width: 767px)
+			width: -webkit-calc(100% - 80px)
+			width: calc(100% - 80px)
+			padding-left: 15px 
+			font-size: 13px 
+			
+		@media (max-width: 575px)
+			width: 100%
+			padding-left: 0 
+		
 		.content-footer
 			.total-likes
 				margin-left: 50px
@@ -99,6 +131,11 @@
 		.tc-action
 			margin: 0 8px
 			color: $text
+			
+			@media (max-width: 767px)
+				margin: 5px 15px 5px 0
+				font-size: 14px 
+				display: inline-block
 			
 
 .reply-form
@@ -139,6 +176,9 @@
 	&__footer
 		padding: 15px 20px
 		
+		@media (max-width: 767px)
+			padding: 10px
+		
 	&__footer
 		background-color: #F6F7F9 
 		border-top: 1px solid #ccc 
@@ -150,7 +190,13 @@
 		&__user-pic
 			display: block
 			width: 100%
-		
+			max-width: 120px
+			
+			@media (max-width: 767px)
+				margin-bottom: 10px
+				width: 100px; 
+				
+			
 	textarea.form-control
 		width: 100%
 		border-color: transparent
@@ -162,6 +208,10 @@
 		display: block
 		color: $text
 		border-width: 1px
+		
+		@media (max-width: 767px)
+			border-color: $border
+			font-size: 14px 
 		
 		&:focus
 			border-color: #ccc
@@ -205,6 +255,10 @@
 					
 				&.tag-button .placeholder:before
 					background-image: url(../images/btn-tag.png)
+					
+				@media (max-width: 575px)
+					&.file
+						margin-bottom: 10px 
 
 
 /* Post list message */
@@ -218,15 +272,26 @@
 	&__footer
 		padding: 15px 20px
 		
+		@media (max-width: 767px)
+			padding: 10px
+		
 	&__body
 		&__user-pic
 			display: block
 			width: 100%
 			
+			@media (max-width: 767px)
+				width: 100px
+				margin-bottom: 10px 
+			
 		&__content
 			font-size: 14px
 			color: $text-light
 			padding-bottom: 60px 
+			
+			@media (max-width: 767px)
+				padding-bottom: 0
+				font-size: 13px 
 			  
 			.name
 				font-size: 14px
@@ -243,7 +308,9 @@
 			border-top: 1px solid #ccc
 			display: flex
 			flex-wrap: wrap
-			margin-bottom: -5px 
+			
+			@media (min-width: 768px)
+				margin-bottom: -5px 
 			
 			a
 				color: $text
@@ -258,8 +325,14 @@
 				.fa
 				 	font-size: 18px 
 				 	
+				 	@media (max-width: 767px)
+				 		font-size: 16px 
+				 	
 				&:not(:last-child)
 					margin-right: 60px 
+					
+					@media (max-width: 767px)
+						margin-right: 25px 
 					
 	&__footer
 		border-top: 2px solid #ccc
@@ -275,8 +348,17 @@
 		width: 50px
 		margin-right: 25px
 		
+		@media (max-width: 767px)
+			width: 40px
+			margin-right: 5px 
+		
 	.form-control
 		width: -webkit-calc(100% - 75px)
 		width: calc(100% - 75px)
 		height: 50px
 		color: $text
+		
+		@media (max-width: 767px)
+			width: -webkit-calc(100% - 45px)
+			width: calc(100% - 45px)
+			height: 60px

@@ -38,7 +38,8 @@
 	th,
 	td
 		padding: 0.5rem 0.75rem
-		
+		@media (max-width: 767px)
+			padding: 0.2rem 0.75rem
 		@media (min-width: 768px)
 			&:first-child
 				padding-left: 30px
@@ -53,6 +54,9 @@
 		tr
 			&:nth-child(odd)
 				background-color: #F9F9F9
+			@media (max-width: 767px)
+				padding-top: 10px
+				padding-bottom: 10px  
 				
 		td
 			vertical-align: top 

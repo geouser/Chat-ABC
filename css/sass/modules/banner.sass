@@ -3,6 +3,10 @@
     padding: 12px 0 
     color: #FFF 
     font-size: 19px  
+    @media(max-width: 991px)
+        font-size: 18px 
+    @media(max-width: 767px)
+        font-size: 16px 
     &:before
         content: ""
         width: 100%
@@ -20,9 +24,15 @@
         text-align: center
     &__text
         color: #FFF 
-        padding: 50px 0
+        padding: 50px 10px
         font-size: 19px  
         line-height: 1.4 
+        @media(max-width: 991px)
+            font-size: 16px
+        @media(max-width: 767px)
+            font-size: 15px 
+        @media(max-width: 400px)
+            font-size: 14px 
         
     &--centered
         padding: 70px 0 
@@ -30,8 +40,15 @@
         h2
             font-size: 34px
             margin-bottom: 16px 
+            @media(max-width: 767px)
+                font-size: 28px 
+            @media(max-width: 400px)
+                font-size: 24px 
+                margin-bottom: 10px 
         * + img
             margin-top: 30px  
+            @media(max-width: 400px)
+                margin-top: 20px 
         
     &--gray
         &:before
@@ -39,14 +56,24 @@
             
     &--presentation
         padding: 60px
+        @media(max-width: 991px)
+            padding: 40px 
+        @media(max-width: 767px)
+            padding: 20px 
+        @media(max-width: 599px)
+            text-align: center
         p
             line-height: 1.7 
         h3
             font-size: 24px
             margin-bottom: 30px
             font-weight: 700 
+            @media(max-width: 599px)
+                margin-bottom: 20px 
         .banner__img 
             text-align: left  
+            @media(max-width: 767px)
+                text-align: center
         &:before
             display: none
         &:nth-of-type(2n)
@@ -54,8 +81,14 @@
                 flex-direction: row-reverse
                 .banner__img 
                     text-align: right
+                    @media(max-width: 767px)
+                        text-align: center
         .btn
             margin-top: 40px 
+            @media(max-width: 991px)
+                margin-top: 20px 
+            @media(max-width: 767px)
+                margin-top: 10px 
     &--bigImg
         padding: 90px 0 
         img
@@ -71,3 +104,7 @@
             
 .offer + .section:not(.banner) + .section.banner 
     padding-top: 0 
+    @media(max-width: 991px)
+        margin-top: -60px 
+    @media(max-width: 599px)
+        margin-top: -40px 

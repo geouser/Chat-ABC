@@ -4,9 +4,15 @@ body
     font-family: $raleway
     font-size: 18px  
     color: $text 
+    @media(max-width: 599px)
+        font-size: 16px 
+    @media(max-width: 400px)
+        font-size: 14px 
     
 body
     padding-top: 125px 
+    @media(max-width: 991px)
+        padding-top: 0 
 
 .container
     @media (min-width: 1200px)
@@ -19,6 +25,11 @@ body
         border-width: 14px !important
     &--mid
         border-width: 8px !important
+    @media(max-width: 991px)
+        &--big
+            border-width: 7px !important
+        &--mid
+            border-width: 4px !important
 
 .primary-content
 	padding-bottom: 90px

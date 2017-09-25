@@ -3,7 +3,8 @@
 	color: #999 
 	padding: 80px 0
 	font-size: 15px
-	
+	@media(max-width: 599px)
+		font-size: 14px 
 	a
 		color: inherit
 
@@ -18,7 +19,8 @@
 	&-menu
 		font-size: 17px
 		padding-bottom: 25px 
-		 
+		@media(max-width: 599px)
+			font-size: 15px 
 		ul
 			padding: 0
 			margin: 0 
@@ -38,6 +40,12 @@
 .map
 	height: 510px 
 	margin: 60px auto 35px 
+	@media (min-width: 1200px)
+		height: 400px
+	@media(max-width: 767px)
+		height: 300px 
+	@media(max-width: 400px)
+		height: 250px 
 
 address
 	line-height: 1.7 

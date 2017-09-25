@@ -6,6 +6,10 @@
         border-radius: 0 
         border: none
         color: #fff 
+        @media(max-width: 599px)
+            display: block
+            width: 100% 
+            border-radius: none !important 
         &.active
             background-color: #FFF
             color: $blue 
@@ -67,7 +71,8 @@ form
     border-color: #ddd 
     color: $text-light
     font-size: 14px 
-
+    @media(max-width: 599px)
+        font-size: 13px 
     
 .btn
     font-size: 14px 

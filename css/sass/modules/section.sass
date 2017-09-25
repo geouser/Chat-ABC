@@ -3,18 +3,33 @@
     background-position: 50% 50%  
     background-repeat: no-repeat
     padding: 50px 0 70px 
+    @media(max-width: 599px)
+    	padding: 40px 0
 .section
 	&-title
 		color: $text
 		text-align: center	
 		margin-bottom: 45px 
+		@media(max-width: 599px)
+			margin-bottom: 25px 
 		h2
 			font-size: 33px 
 			color: #666 
-		
+			@media(max-width: 991px)
+				font-size: 30px 
+			@media(max-width: 599px)
+				font-size: 24px  
+			@media(max-width: 400px)
+				font-size: 20px  
 		p
 			font-size: 19.5px
 			color: $text-light 
+			@media(max-width: 991px)
+				font-size: 18px
+				br
+					display: none
+			@media(max-width: 599px)
+				font-size: 14px  
 
 		&.light
 			h2,
@@ -32,6 +47,10 @@
 				font-weight: 700
 				color: $text  
 				font-size: 24px 
+				@media(max-width: 991px)
+					font-size: 22px 
+				@media(max-width: 599px)
+					font-size: 18px 
 			p
 				color: $text
 				line-height: 1.7

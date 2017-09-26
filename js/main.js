@@ -27,6 +27,32 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  File input logic
+    ---------------------------*/
+    $('input[type=file]').each(function(index, el) {
+        $(this).on('change', function(event) {
+            event.preventDefault();
+            var placeholder = $(this).siblings('.placeholder');
+        
+            if ( this.files.length > 0 ) {
+                if ( this.files[0].size < 5000000 ) {
+                    var filename = $(this).val().split('/').pop().split('\\').pop();
+                    if ( filename == '' ) {
+                        filename = placeholder.attr('data-label');
+                    }
+                    placeholder.text(filename);
+                } else {
+                    alert('Maximum file size is 5Mb');
+                }    
+            } else {
+                placeholder.text( placeholder.attr('data-label') );
+            }
+            
+        });
+    });
+
+
+    /*---------------------------
                                   Custom select
     ---------------------------*/
     $('.custom-select').each(function(index, el) {

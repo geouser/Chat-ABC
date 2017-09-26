@@ -35,11 +35,16 @@
 	width: 100%
 	font-size: 14px 
 	
+	@media (max-width: 767px)
+		display: block
+	
 	th,
 	td
 		padding: 0.5rem 0.75rem
+		
 		@media (max-width: 767px)
 			padding: 0.2rem 0.75rem
+			
 		@media (min-width: 768px)
 			&:first-child
 				padding-left: 30px
@@ -51,12 +56,19 @@
 			font-weight: 400
 			
 	tbody
+		@media (max-width: 767px)
+			display: block
+			width: 100%
+			
 		tr
 			&:nth-child(odd)
 				background-color: #F9F9F9
+				
 			@media (max-width: 767px)
 				padding-top: 10px
 				padding-bottom: 10px  
+				display: block
+				width: 100%
 				
 		td
 			vertical-align: top 

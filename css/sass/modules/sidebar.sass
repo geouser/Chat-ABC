@@ -64,6 +64,24 @@
 				
 		a
 			color: inherit 
+			position: relative
+			text-decoration: none
+			&:after
+				content: ""
+				display: block
+				border-top: 1px solid
+				width: 100%
+				color: inherit  
+				position: absolute
+				left: 0
+				right: 0
+				margin: auto
+				bottom: -2px
+				max-width: 0
+				transition: all .2s       
+			&:hover
+				&:after
+		    		max-width: 100%
 			
 		li.active,
 		a:hover

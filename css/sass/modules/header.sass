@@ -24,6 +24,25 @@
 		display: flex
 		align-items: center
 		font-size: 15px 
+		a
+			position: relative
+			text-decoration: none
+			&:after
+				content: ""
+				display: block
+				border-top: 1px solid
+				width: 100%
+				color: inherit  
+				position: absolute
+				left: 0
+				right: 0
+				margin: auto
+				bottom: -2px
+				max-width: 0
+				transition: all .2s      
+			&:hover
+				&:after
+		    		max-width: 100% 
 		@media(max-width: 991px)
 			height: auto
 			display: block 
@@ -143,7 +162,7 @@
 	transform: rotate(0deg)
 	transition: .5s ease-in-out
 	cursor: pointer
-	z-index: 100 
+	z-index: 1001 
 	outline: none !important
 	&.is-active
 		transform: translateX(-260px) 

@@ -149,6 +149,16 @@ form
         transition: all 0.3s ease
         color: $text
         
+        @media (max-width: 599px)
+            height: 36px
+            font-size: 13px 
+            
+        @media (max-width: 400px)
+            height: 34px
+        
+        &:before
+            display: none
+        
         &.is-active
             background-color: #f9f9f9 
             

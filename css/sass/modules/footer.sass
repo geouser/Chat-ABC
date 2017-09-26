@@ -44,6 +44,25 @@
 		li
 			display: inline-block
 			margin: 0 10px
+			a
+				position: relative
+				text-decoration: none
+				&:after
+					content: ""
+					display: block
+					border-top: 1px solid
+					width: 100%
+					color: inherit  
+					position: absolute
+					left: 0
+					right: 0
+					margin: auto
+					bottom: -4px
+					max-width: 0
+					transition: all .2s      
+				&:hover
+					&:after
+			    		max-width: 100% 
 			
 	&-menu + &-menu
 		padding-top: 25px

@@ -25,46 +25,6 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
-    /*---------------------------
-                                  ADD CLASS ON SCROLL
-    ---------------------------*/
-    $(function() { 
-        var $document = $(document),
-            $element = $('.toggle-menu'),
-            $element2 = $('header'),
-            className = 'hasScrolled';
-
-        $document.scroll(function() {
-            $element.toggleClass(className, $document.scrollTop() >= 1);
-            $element2.toggleClass(className, $document.scrollTop() >= 1);
-        });
-    });
-
-
-    /*---------------------------
-                                  File input logic
-    ---------------------------*/
-    $('input[type=file]').each(function(index, el) {
-        $(this).on('change', function(event) {
-            event.preventDefault();
-            var placeholder = $(this).siblings('.placeholder');
-        
-            if ( this.files.length > 0 ) {
-                if ( this.files[0].size < 5000000 ) {
-                    var filename = $(this).val().split('/').pop().split('\\').pop();
-                    if ( filename == '' ) {
-                        filename = placeholder.attr('data-label');
-                    }
-                    placeholder.text(filename);
-                } else {
-                    alert('Maximum file size is 5Mb');
-                }    
-            } else {
-                placeholder.text( placeholder.attr('data-label') );
-            }
-            
-        });
-    });
 
     /*---------------------------
                                   Custom select
@@ -332,5 +292,10 @@ jQuery(document).ready(function($) {
     if ( exist( '#map_canvas' ) ) {
         googleMap_initialize();
     }
+
+    VanillaTilt.init(document.querySelector(".your-element"), {
+        max: 25,
+        speed: 400
+    });
 
 }); // end file

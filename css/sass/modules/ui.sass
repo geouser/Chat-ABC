@@ -79,10 +79,37 @@ form
     border-radius: 0
     padding: 0.6rem 0.75rem
     cursor: pointer
+    &:hover:before, 
+    &:focus:before, 
+    &:active:before
+        top: -6px
+        right: -6px
+        bottom: -6px
+        left: -6px
+        opacity: 1 
     &.btn-lg
         text-transform: uppercase
         font-size: 18px 
         padding: 0.3rem 2.3rem 
+        
+    -webkit-transform: perspective(1px) translateZ(0)
+    transform: perspective(1px) translateZ(0)
+    box-shadow: 0 0 1px transparent
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        border: #fff solid 2px
+        border-color: inherit
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        opacity: 0 
+        -webkit-transition-duration: 0.2s
+        transition-duration: 0.2s
+        -webkit-transition-property: top, right, bottom, left
+        transition-property: top, right, bottom, left, opacity
     
 
 .rating
